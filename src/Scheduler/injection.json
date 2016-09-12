@@ -1,0 +1,89 @@
+﻿// README:
+
+// 1. ABOUT THE SCOPE
+/*
+    enum Scope
+    {
+        /// <summary>
+        /// Indicates that instances activated should not be re-used, nor have their lifecycle managed by IoC container.
+        /// </summary>
+        Transient = 0,
+        /// <summary>
+        /// Indicates that only a single instance should be created, and then should be re-used for all subsequent requests.
+        /// </summary>
+        Singleton,
+        /// <summary>
+        /// Indicates that instances activated via the binding should be re-used within the same thread.
+        /// </summary>
+        PerThread,
+    }
+*/
+
+// 2. ABOUT THE IoC
+
+// container.Bind<From>().To<To>(); eg: container.Bind<IService>().To<ServiceImpl>()
+// The "From" and "To" form is "namespace.class, assembly";  
+
+// 3. DEMO
+/*
+[
+    {
+        "name": "Top.Scheduler",
+        "items": [
+            {
+                "from": "Top.Scheduler.IService, Top.Scheduler",
+                "to": "Top.Scheduler.ServiceImpl, Top.Scheduler",
+                "scope": "Singleton"
+            },
+            {
+                "from": "Top.Scheduler.IService2, Top.Scheduler",
+                "to": "Top.Scheduler.ServiceImpl2, Top.Scheduler",
+                "scope": "PerThread"
+            }
+        ]
+    },
+    {
+        "name": "Top.Finance",
+        "items": [
+            {
+                "from": "Top.Finance.IService, Top.Finance",
+                "to": "Top.Finance.ServiceImpl, Top.Finance",
+                "scope": "Transient"
+            },
+            {
+                "from": "Top.Finance.IService2, Top.Finance",
+                "to": "Top.Finance.ServiceImpl2, Top.Finance",
+                "scope": "Singleton"
+            }
+        ]
+    }
+]
+*/
+
+[
+    {
+        "name": "Top.Finance",
+        "items": [
+            {
+                "from": "Top.Finance.Business.Services.UnFrozenService, Top.Finance.Business",
+                "to": "Top.Finance.Business.Services.UnFrozenService, Top.Finance.Business",
+                "scope": "Singleton"
+            },
+            {
+                "from": "Top.Finance.Business.Services.ReportService, Top.Finance.Business",
+                "to": "Top.Finance.Business.Services.ReportService, Top.Finance.Business",
+                "scope": "Singleton"
+            },
+            {
+                "from": "Top.Finance.Business.Services.ProfitsService, Top.Finance.Business",
+                "to": "Top.Finance.Business.Services.ProfitsService, Top.Finance.Business",
+                "scope": "Singleton"
+            },
+             {
+                "from": "Top.Finance.Business.Services.ImmediateService, Top.Finance.Business",
+                "to": "Top.Finance.Business.Services.ImmediateService, Top.Finance.Business",
+                "scope": "Singleton"
+            }
+        ]
+    }
+]
