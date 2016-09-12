@@ -1,6 +1,37 @@
 {
   "version": "1.0.0-*",
+  "description": "The WYSWYG task scheduler based on Hangfire implementation for Asp.Net Core.",
+  "authors": [ "rigofunc", "rigofunc@outlook.com", "lotosbin", "lotosbin@gmail.com" ],
+  "packOptions": {
+    "summary": "The WYSWYG task scheduler based on Hangfire implementation for Asp.Net Core.",
+    "tags": [
+      "aspnetcore",
+      "hangfire",
+      "webapi",
+      "aspnet"
+    ],
+    "owners": [
+      "rigofunc",
+      "rigofunc@outlook.com",
+      "lotosbin", 
+      "lotosbin@gmail.com",
+      "love.net"
+    ],
+    "releaseNotes": "",
+    "licenseUrl": "https://github.com/lovedotnet/Love.Net.Scheduler/blob/master/LICENSE",
+    "projectUrl": "https://github.com/lovedotnet/Love.Net.Scheduler",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/lovedotnet/Love.Net.Scheduler.git"
+    }
+  },
   "buildOptions": {
+    "optimize": true,
+    "nowarn": [
+      "CS1591"
+    ],
+    "xmlDoc": true,
+    "warningsAsErrors": true,
     "debugType": "portable",
     "emitEntryPoint": true
   },
