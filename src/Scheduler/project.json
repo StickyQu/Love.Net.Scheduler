@@ -1,6 +1,6 @@
 {
     "name": "Love.Net.Scheduler",
-    "version": "1.0.0-*",
+    "version": "1.0.1-*",
     "buildOptions": {
         "embed": [ "wwwroot" ]
     },
@@ -16,5 +16,8 @@
     "frameworks": {
         "netstandard1.6": {
         }
+    },
+    "packOptions": {
+        "projectUrl":"https://github.com/lovedotnet/Love.Net.Scheduler"
     }
 }
