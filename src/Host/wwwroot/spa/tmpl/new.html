@@ -1,0 +1,24 @@
+<h1 class="page-header">Invoke Api Using Cron</h1>
+<div class="row">
+    <div class="col-md-3">
+        <div class="input-group">
+            <div class="input-group-addon">Queue</div>
+            <input id="queue" class="form-control" type="text" ng-model="job.Queue" />
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="input-group">
+            <div class="input-group-addon">Url</div>
+            <input id="callbackUrl" class="form-control" type="url" ng-model="job.CallbackUrl" />
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="input-group">
+            <div class="input-group-addon">Cron</div>
+            <input id="cron" type="text" class="form-control" ng-model="job.Cron" />
+        </div>
+    </div>
+    <div class="col-md-3">
+        <button type="button" ng-click="add(job)" class="btn btn-primary">Submit</button>
+    </div>
+</div>

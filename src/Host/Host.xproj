@@ -6,12 +6,11 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>8da0b405-be85-4212-93b5-d866f8037fcb</ProjectGuid>
-    <RootNamespace>Host</RootNamespace>
+    <ProjectGuid>1de47260-d846-4fba-9ec1-9d87d9bf58c6</ProjectGuid>
+    <RootNamespace>Love.Net.Scheduler.Host</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
   </PropertyGroup>
-
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>

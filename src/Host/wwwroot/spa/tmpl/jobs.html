@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="page-header">Edit Job's Cron</h1>
+        <div class="btn-toolbar btn-toolbar-top">
+            <div class="input-group col-md-3 col-md-offset-9">
+                <div class="input-group-addon">Items</div>
+                <select class="form-control input-xs" ng-model="pageSize" ng-init="pageSize = '10'" convert-to-number>
+                    <option value="-1">ALL</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+                <div class="input-group-addon">
+                    <span class="glyphicon glyphicon-repeat" ng-click="getJobs()"></span>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="min-width">Id</th>
+                        <th class="min-width">Cron</th>
+                        <th class="min-width">Cron's Description</th>
+                        <th>Job</th>
+                        <th class="min-width">Next Execution</th>
+                        <th class="min-width">Last Execution</th>
+                        <th class="align-right min-width">Save Cron</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="js-jobs-list-row hover" ng-repeat="job in jobs">
+                        <td class="min-width">{{job.id}}</td>
+                        <td class="min-width">
+                            <input style="border: 0px none; width:70px;" type="text" ng-model="job.cron" />
+                        </td>
+                        <td class="min-width">{{job.des}}</td>
+                        <td>{{job.job}}</td>
+                        <td class="min-width">{{job.next}}</td>
+                        <td class="min-width">{{job.last}}</td>
+                        <td class="align-right min-width">
+                            <button class="btn btn-xs btn-link" ng-click="update(job)">Save Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btn-toolbar">
+            <div class="btn-toolbar-label">Total items: {{jobs.length}}</div>
+        </div>
+    </div>
+</div>
