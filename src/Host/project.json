@@ -13,7 +13,7 @@
     "owners": [
       "rigofunc",
       "rigofunc@outlook.com",
-      "lotosbin", 
+      "lotosbin",
       "lotosbin@gmail.com",
       "love.net"
     ],
@@ -36,19 +36,19 @@
     "emitEntryPoint": true
   },
   "dependencies": {
-        "Hangfire.AspNetCore": "1.6.0",
-        "Love.Net.Hangfire.Redis.StackExchange": "1.0.1",
-        "Microsoft.AspNetCore.Mvc": "1.0.0",
-        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
-        "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc1-final",
-        "Scheduler": "1.0.0-*",
-        "Microsoft.NETCore.App": {
-            "type": "platform",
-            "version": "1.0.0"
-        }
-    },
-    "frameworks": {
-        "netcoreapp1.0": {
-        }
+    "Hangfire.AspNetCore": "1.6.0",
+    "Love.Net.Hangfire.Redis.StackExchange": "1.0.1",
+    "Microsoft.AspNetCore.Mvc": "1.0.0",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc1-final",
+    "Scheduler": "1.0.0-*",
+    "Microsoft.NETCore.App": {
+      "type": "platform",
+      "version": "1.0.0"
     }
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+    }
+  }
 }

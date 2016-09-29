@@ -83,7 +83,6 @@ namespace Love.Net.Scheduler.Controllers {
         [HttpPut("update")]
         public IActionResult Put([FromBody] UpdateDto updateDto) {
             try {
-
                 CoreFunc.UpdateCron(updateDto.JobId, updateDto.Cron);
                 return Ok("");
             }
@@ -92,6 +91,11 @@ namespace Love.Net.Scheduler.Controllers {
             }
         }
 
+        [HttpDelete("job/{id}")]
+        public IActionResult Delete([FromRoute] string id) {
+            RecurringJob.RemoveIfExists(id);
+            return Ok("");
+        }
         [HttpGet("cron")]
         public IActionResult GetCron() {
             var items = new[]
