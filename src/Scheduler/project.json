@@ -1,23 +1,23 @@
 {
-    "name": "Love.Net.Scheduler",
-    "version": "1.0.1-*",
-    "buildOptions": {
-        "embed": [ "wwwroot" ]
-    },
+  "name": "Love.Net.Scheduler",
+  "version": "1.0.2-*",
+  "buildOptions": {
+    "embed": [ "wwwroot" ]
+  },
 
-    "dependencies": {
-        "Hangfire.AspNetCore": "1.6.0",
-        "Microsoft.AspNetCore.Mvc": "1.0.0",
-        "NETStandard.Library": "1.6.0",
-        "Love.Net.Hangfire.Redis.StackExchange": "1.0.1",
-        "Love.Net.CronExpressionDescriptor": "1.0.3"
-    },
+  "dependencies": {
+    "Hangfire.AspNetCore": "1.6.*",
+    "Microsoft.AspNetCore.Mvc": "1.0.*",
+    "NETStandard.Library": "1.6.*",
+    "Love.Net.Hangfire.Redis.StackExchange": "1.0.*",
+    "Love.Net.CronExpressionDescriptor": "1.0.*"
+  },
 
-    "frameworks": {
-        "netstandard1.6": {
-        }
-    },
-    "packOptions": {
-        "projectUrl":"https://github.com/lovedotnet/Love.Net.Scheduler"
+  "frameworks": {
+    "netstandard1.6": {
     }
+  },
+  "packOptions": {
+    "projectUrl": "https://github.com/lovedotnet/Love.Net.Scheduler"
+  }
 }
