@@ -29,3 +29,12 @@ This repo contains the WYSWYG task scheduler based on [Hangfire](http://hangfire
 
 # view
 - open [http://localhost:5000]()
+
+
+# Authorization
+
+```csharp
+            app.UseHangfireDashboard(options: new DashboardOptions() {
+                Authorization = new List<IDashboardAuthorizationFilter>() { new DashboardAuthorizationFilter() }
+            });
+```

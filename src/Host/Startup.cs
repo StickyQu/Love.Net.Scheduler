@@ -1,8 +1,12 @@
+using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Hangfire;
+using Hangfire.Dashboard;
 using Hangfire.Redis;
+using Love.Net.Scheduler;
+
 namespace ConsoleApplication {
     public class Startup {
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -20,7 +24,9 @@ namespace ConsoleApplication {
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
             GlobalConfiguration.Configuration.UseStorage(new RedisStorage("127.0.0.1:6379"));
 
-            app.UseHangfireDashboard();
+            app.UseHangfireDashboard(options: new DashboardOptions() {
+                Authorization = new List<IDashboardAuthorizationFilter>() { new DashboardAuthorizationFilter() }
+            });
             app.UseHangfireServer();
             app.UseMvcWithDefaultRoute();
             app.UseStaticFiles();
