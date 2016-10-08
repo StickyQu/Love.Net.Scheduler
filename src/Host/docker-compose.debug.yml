@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  love.net.scheduler.host:
+    image: username/love.net.scheduler.host:Debug
+    build:
+      context: .
+      dockerfile: Dockerfile.debug
+    environment:
+      - REMOTE_DEBUGGING=${REMOTE_DEBUGGING}
+    volumes:
+      - .:/app

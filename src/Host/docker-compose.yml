@@ -1,0 +1,8 @@
+version: '2'
+
+services:
+  love.net.scheduler.host:
+    image: username/love.net.scheduler.host
+    build:
+      context: .
+      dockerfile: Dockerfile
