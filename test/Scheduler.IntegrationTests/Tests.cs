@@ -40,7 +40,8 @@ namespace Tests {
             var responseMessage = await _client.PostAsJsonAsync($"jobs", new
                 CreateDto {
                 CallbackUrl = "http://www.baidu.com",
-                Cron = "1 2 2 2 2"
+                Cron = "1 2 2 2 2",
+                Method = "GET"
             });
             var message = await responseMessage.Content.ReadAsStringAsync();
             _output.WriteLine(message);
