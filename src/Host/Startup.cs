@@ -21,6 +21,8 @@ namespace ConsoleApplication {
         }
         public void Configure(IApplicationBuilder app) {
 
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
             CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("en-US");
             GlobalConfiguration.Configuration.UseStorage(new RedisStorage("127.0.0.1:6379"));
 
@@ -29,8 +31,6 @@ namespace ConsoleApplication {
             });
             app.UseHangfireServer();
             app.UseMvcWithDefaultRoute();
-            app.UseStaticFiles();
-            app.UseDefaultFiles();
         }
     }
 }

@@ -41,11 +41,11 @@
     "emitEntryPoint": true
   },
   "dependencies": {
-    "Hangfire.AspNetCore": "1.6.0",
-    "Love.Net.Hangfire.Redis.StackExchange": "1.0.1",
-    "Microsoft.AspNetCore.Mvc": "1.0.0",
-    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
-    "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc1-final",
+    "Hangfire.AspNetCore": "1.6.*",
+    "Love.Net.Hangfire.Redis.StackExchange": "1.0.*",
+    "Microsoft.AspNetCore.Mvc": "1.0.*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.*",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.*",
     "Scheduler": "1.0.*",
     "Microsoft.NETCore.App": {
       "type": "platform",
