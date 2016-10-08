@@ -108,8 +108,8 @@ app.controller('jobsController', ['$scope', 'apiRepository', function ($scope, a
 }]);
 
 app.controller('newController', ['$scope', 'apiRepository', function ($scope, apiRepository) {
-    $scope.job = { Queue: "default", CallbackUrl: "http://www.baidu.com", Cron: "* * * * *" };
-    
+    $scope.job = { Queue: "default", CallbackUrl: "http://www.baidu.com", Cron: "* * * * *", Method: "GET" };
+
     $scope.add = function (job) {
         apiRepository.addJob(job).success(function (data) {
             window.location.href = "#jobs";
