@@ -1,16 +1,17 @@
 {
   "name": "Love.Net.Scheduler",
-  "version": "1.0.2-*",
+  "version": "1.0.3-*",
   "buildOptions": {
     "embed": [ "wwwroot" ]
   },
 
   "dependencies": {
-    "Hangfire.AspNetCore": "1.6.*",
-    "Microsoft.AspNetCore.Mvc": "1.0.*",
     "NETStandard.Library": "1.6.*",
+    "Microsoft.AspNetCore.Mvc": "1.0.*",
     "Love.Net.Hangfire.Redis.StackExchange": "1.0.*",
-    "Love.Net.CronExpressionDescriptor": "1.0.*"
+    "Love.Net.CronExpressionDescriptor": "1.0.*",
+    "Hangfire.AspNetCore": "1.6.*",
+    "RigoFunc.Http": "1.0.*"
   },
 
   "frameworks": {

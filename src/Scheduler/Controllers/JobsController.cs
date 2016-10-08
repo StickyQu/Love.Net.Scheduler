@@ -76,7 +76,7 @@ namespace Love.Net.Scheduler.Controllers {
 
         [HttpPost("jobs")]
         public IActionResult Post([FromBody] CreateDto createDto) {
-            RecurringJob.AddOrUpdate(createDto.CallbackUrl, () => ApiCallbackJob.ApiCallback(createDto.CallbackUrl), createDto.Cron, queue: createDto.Queue);
+            RecurringJob.AddOrUpdate(createDto.CallbackUrl, () => ApiCallbackJob.ApiCallback(createDto.CallbackUrl, createDto.Method), createDto.Cron, queue: createDto.Queue);
             return Ok();
         }
 
@@ -138,6 +138,10 @@ namespace Love.Net.Scheduler.Controllers {
     public class CreateDto {
         public string Queue { get; set; } = "default";
         public string CallbackUrl { get; set; }
+        /// <summary>
+        /// GET/POST/PUT/DELETE
+        /// </summary>
+        public string Method { get; set; } = "GET";
         public string Cron { get; set; } = "* * * * *";
     }
 }

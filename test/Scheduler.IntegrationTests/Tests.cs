@@ -1,8 +1,8 @@
-﻿using System;
-using System.Net.Http;
+﻿using System.Net.Http;
 using System.Threading.Tasks;
 using ConsoleApplication;
 using Love.Net.Scheduler.Controllers;
+using Love.Net.Scheduler.Jobs;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Xunit;
@@ -22,6 +22,7 @@ namespace Tests {
             _server = new TestServer(builder);
             _client = _server.CreateClient();
         }
+
         /// <summary>
         /// <see cref="JobsController.Get"/>
         /// </summary>
@@ -37,13 +38,18 @@ namespace Tests {
         [Fact]
         public async Task Post() {
             var responseMessage = await _client.PostAsJsonAsync($"jobs", new
-            CreateDto {
+                CreateDto {
                 CallbackUrl = "http://www.baidu.com",
                 Cron = "1 2 2 2 2"
             });
             var message = await responseMessage.Content.ReadAsStringAsync();
             _output.WriteLine(message);
             Assert.True(false);
+        }
+
+        public async Task Testsss() {
+            var callbackUrl = "http://www.baidu.com";
+            ApiCallbackJob.ApiCallbackAndRemove(callbackUrl);
         }
     }
 }
